@@ -1,4 +1,5 @@
 streamlit==1.40.1
+numpy==1.24.4
 pandas==2.0.3
 praw==7.8.1
 openai==2.2.0
