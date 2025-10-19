@@ -6,7 +6,7 @@ Created on Sun Oct 19 11:24:58 2025
 """
 # 👗 Brand Sentiment Explorer
 
-![Homepage](images/homepage.png)
+![Homepage](images/home page.png)
 
 ### 🧠 Overview
 Reddit has almost **2 billion monthly visitors**, and about **90 percent** are lurkers — users who mostly read other people’s comments without posting.  
@@ -24,14 +24,14 @@ It analyzes the **latest 20 Reddit posts** mentioning a brand and organizes the 
 1. **Enter a Brand Name**  
    On the home page, type any clothing brand (for example: `Zara`, `H&M`, `Shein`) and press the **Analyze** button.  
 
-   ![Homepage](images/homepage.png)
+   ![Homepage](images/home page.png)
 
 2. **Processing**  
    The app searches Reddit for posts related to your brand and displays progress messages like:  
-   - “🔍 Searching Reddit for posts about Zara”  
+   - “🔍 Searching Reddit for posts about H&M”  
    - “🧠 Generating summary...”  
 
-   ![Processing](images/processing2.png)
+   ![Processing](images/processing 2.png)
 
 3. **View the Results**  
    Once analysis is complete, the summary is shown with key insights divided into **Quality** and **Affordability** sections.
@@ -56,6 +56,6 @@ It analyzes the **latest 20 Reddit posts** mentioning a brand and organizes the 
 ### 💡 How to Run Locally
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/brand-sentiment-explorer.git
-   cd brand-sentiment-explorer
+   git clone https://github.com/Ouambo-SIM/brand-sentiment-Webapp.git
+   cd brand-sentiment-Webapp
 
