@@ -10,7 +10,7 @@ Created on Sun Oct 12 10:50:57 2025
 import streamlit as st
 import pandas as pd
 import cohere 
-
+import time
 import praw 
 
 
@@ -37,8 +37,8 @@ if st.button("Analyze"):
     if not brand_name.strip():
         st.warning("Please enter a brand name.")
     else:    
-        
-        st.write("🔍 Searching Reddit for posts about:", brand_name)
+
+    
     
 
         # Reddit Interaction
@@ -48,12 +48,24 @@ if st.button("Analyze"):
                               user_agent="BrandSentimentApp")
         subreddit = reddit.subreddit("all")
         posts_data = []
-        for post in subreddit.search(brand_name, limit=20):
-             posts_data.append({
-                 "title": post.title,
-                "comments": [comment.body for comment in post.comments[:5] if hasattr(comment, 'body')]
+        
+        progress_text = "Fetching Reddit posts..."
+        my_bar = st.progress(0, text=progress_text)
+ 
+        limit = 20
+        for i, post in enumerate(subreddit.search(brand_name, limit=limit)):
+              posts_data.append({
+              "title": post.title,
+              "comments": [comment.body for comment in post.comments[:5] if hasattr(comment, 'body')]
              })
+    
+        # Update progress bar
+        progress = int(((i + 1) / limit) * 100)
+        my_bar.progress(progress, text=f"Fetching Reddit posts... {progress}%")
+        time.sleep(0.1)  # optional, to make updates visible smoothly
 
+        # Remove progress bar when done
+        my_bar.empty()
         
         st.write("🧠 Generating summary...")
 
