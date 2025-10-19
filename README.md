@@ -6,7 +6,7 @@ Created on Sun Oct 19 11:24:58 2025
 """
 # 👗 Brand Sentiment Explorer
 
-![Homepage](images/home page.png)
+![Homepage](images/homepage.png)
 
 ### 🧠 Overview
 Reddit has almost **2 billion monthly visitors**, and about **90 percent** are lurkers — users who mostly read other people’s comments without posting.  
@@ -24,14 +24,14 @@ It analyzes the **latest 20 Reddit posts** mentioning a brand and organizes the 
 1. **Enter a Brand Name**  
    On the home page, type any clothing brand (for example: `Zara`, `H&M`, `Shein`) and press the **Analyze** button.  
 
-   ![Homepage](images/home page.png)
+   ![Homepage](images/homepage.png)
 
 2. **Processing**  
    The app searches Reddit for posts related to your brand and displays progress messages like:  
    - “🔍 Searching Reddit for posts about H&M”  
    - “🧠 Generating summary...”  
 
-   ![Processing](images/processing 2.png)
+   ![Processing](images/processing2.png)
 
 3. **View the Results**  
    Once analysis is complete, the summary is shown with key insights divided into **Quality** and **Affordability** sections.
